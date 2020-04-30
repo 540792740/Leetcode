@@ -10,4 +10,5 @@
 
 ####4. Sort
 * arr.sort(); // returns [-1, -3, -5, 0, 1, 3]   <br> 
-* arr.sort((x, y) => x - y); // returns [-5, -3, -1, 0, 1, 3]
+* **Ascend:** arr.sort((x, y) => x - y); // returns [-5, -3, -1, 0, 1, 3]
+* **Descend:** arr.sort((x, y) => y - x); // returns [ 3, 1, 0, -1, -3, -5 ]
