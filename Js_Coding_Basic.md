@@ -18,3 +18,6 @@
 * Math.floor(5 / 2) ->2     向下取整
 * parseInt(5 / 2) ->2       向下取整
 * Math.round(5 / 2) ->3     四舍五入
+
+####6. unshift
+* nums.unshift(1) -> add element 1 to left of the array
