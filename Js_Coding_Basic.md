@@ -28,3 +28,4 @@
 nums.splice(2, 3)  -> [1,2,6]
 
 ####8. dictionary
+* var dic = {} 
