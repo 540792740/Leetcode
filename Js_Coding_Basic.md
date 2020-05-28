@@ -29,3 +29,12 @@ nums.splice(2, 3)  -> [1,2,6]
 
 ####8. dictionary
 * var dic = {} 
+
+####9. reverse
+* array.reverse()
+
+####10. map
+* array.map(a=>{return a.reverse()})
+
+####11. Bit Manipulation
+# or gate a^1  -> [0,1,1,]  -> [1,0,0]
