@@ -1,3 +1,3 @@
-# JS_leetcode
+# leetcode
 
 This project used for improving coding ability
