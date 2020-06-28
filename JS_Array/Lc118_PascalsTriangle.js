@@ -20,7 +20,12 @@ var generate = function(numRows) {
             res.push(temp)
         }
     }
-    return res;
+    var resString = ''
+    for (let i = 0; i < res.length; i++){
+        for (let j = 0; j < res[i].length; j++){
+            resString += JSON.stringify(res[i][j])
+        }
+    }
+    return resString;
 };
-
-console.log(generate(5))
+a = "a,b,b"
