@@ -44,8 +44,7 @@ b = 'abc'
 c = NaN
 d = undefined
 e = ''
+f = ['a', 'b']
 console.log()
-console.log(c + a)
-console.log(c + b)
-console.log(c + d)
+console.log(f + d)
 // console.log(b + c)
