@@ -38,3 +38,7 @@ nums.splice(2, 3)  -> [1,2,6]
 
 ####11. Bit Manipulation
 # or gate a^1  -> [0,1,1,]  -> [1,0,0]
+
+#### undefine:
+undefine * undefine = NaN
+

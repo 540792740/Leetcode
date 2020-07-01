@@ -1,7 +1,7 @@
 package Java_string;
 
 public class reverseString_344 {
-    public char[] reverseString(char[] s) {
+    public static char[] reverseString(char[] s) {
         int ls = s.length - 1;
         if (ls <= 0) return s;
         for(int i = 0; i <= ls / 2; i++){
