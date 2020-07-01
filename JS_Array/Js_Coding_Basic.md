@@ -40,5 +40,11 @@ nums.splice(2, 3)  -> [1,2,6]
 # or gate a^1  -> [0,1,1,]  -> [1,0,0]
 
 #### undefine:
-undefine * undefine = NaN
+undefine + ''    =  undefine
+undefine + 'abc' = 'undefineabc'
+undefine + else  =  NaN
 
+number + NaN = NaN
+
+NaN + String = ''
+Nan + else = NaN

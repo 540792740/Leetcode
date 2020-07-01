@@ -38,3 +38,14 @@ let s1= new Square(10);
 console.log('square side= '+ s1.side);
 
 console.log('square area='+ s1.area);
+
+a = 1
+b = 'abc'
+c = NaN
+d = undefined
+e = ''
+console.log()
+console.log(c + a)
+console.log(c + b)
+console.log(c + d)
+// console.log(b + c)
