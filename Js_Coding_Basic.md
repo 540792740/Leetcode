@@ -19,8 +19,10 @@
 * parseInt(5 / 2) ->2       向下取整
 * Math.round(5 / 2) ->3     四舍五入
 
-####6. unshift
-* nums.unshift(1) -> add element 1 to left of the array
+####6. shift, unshift
+nums = [1, 2, 3, 4]
+* nums.shift()   -> [2, 3, 4]
+* nums.unshift(1) -> [1,1,2,3,4] add element 1 to left of the array
 
 ####7. splice
 
@@ -48,3 +50,9 @@ number + NaN = NaN
 
 NaN + String = ''
 Nan + else = NaN
+
+#### Substring:
+'abcdefg'.substring(1, 3)  => bcd
+
+#### keep number 
+    `this.state.total.toFixed(2)` => 0.00
