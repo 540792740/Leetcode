@@ -1,5 +1,3 @@
-
-
 var longestPalindrome = function(s) {
     let res = '';
     let ls = s.length
