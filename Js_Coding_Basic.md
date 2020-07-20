@@ -51,7 +51,7 @@ number + NaN = NaN
 NaN + String = ''
 Nan + else = NaN
 
-#### Substring:
+#### Substring(index,index): (] right not include 
 'abcdefg'.substring(1, 3)  => bcd
 
 #### keep number 
