@@ -22,5 +22,14 @@ var singleNumber1 = function(nums) {
     return res
 }
 
-console.log(singleNumber([2,2,1]))
-console.log(singleNumber1([2,2,1]))
+// console.log(singleNumber([2,2,1]))
+// console.log(singleNumber1([2,2,1]))
+
+const a = new Set()
+a.add(1)
+a.add(2)
+a.add(3)
+a.delete((2))
+// console.log(a)
+
+console.log(s)

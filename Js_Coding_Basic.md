@@ -65,3 +65,14 @@ Nan + else = NaN
     }
     var b = num.reduce(c)
 ```
+
+#### Set:
+    * const s = new Set(arr)  => {2, 3, 5}  => turn into Set
+    * const array = Array.from(s)   => turn into array
+    * s.add(4),  a.delete(2)
+    * for(let i of s){}
+    * s = new Set([1, 2, 4].filter(x => x % 3 == 0))  => how to use filter and map
+    * s.size
+    * let union = new Set([...a, ...b]);  => 并集
+    * let intersect = new Set([...a].filter(x => b.has(x)))    交集
+    * let intersect = new Set([...a].filter(x => b.has(x)))    差集
