@@ -56,3 +56,12 @@ Nan + else = NaN
 
 #### keep number 
     `this.state.total.toFixed(2)` => 0.00
+
+#### reduce() : calculate sum of array
+```
+    var num = [1,2,3,43,4]
+    var c = (total, num)=>{
+        return total + num
+    }
+    var b = num.reduce(c)
+```
