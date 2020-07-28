@@ -1,7 +1,12 @@
 /**
  * @param {number} n
  * @return {number}
+ * Use Sieve of Eratosthenes Algorithm
+ * Space Complexity O(n)
+ * Time Complexity O(nloglogn)
  */
+
+
 
 var countPrimes = function(n) {
     let hash = new Array(n).fill(true);
