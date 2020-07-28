@@ -22,5 +22,5 @@ var lenLongestFibSubseq = function(A) {
     else return 0
 };
 
-console.log(lenLongestFibSubseq( [1,2,3,4,5,6,7,8]))
+console.log(lenLongestFibSubseq( [1, 2,3,4,5,6,7,8]))
 console.log(lenLongestFibSubseq( [7,8]))
