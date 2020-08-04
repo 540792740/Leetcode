@@ -1,16 +1,4 @@
-var dt= new Date();
-var hr = dt.getHours();
-var min = dt.getMinutes();
-var tm = hr.toString()+':'+min.toString();
-var r1 = " BreakFast is served  in the morning ";
-var r2 = " Midday is time for lunch ";
-var r3 = " Supper is now served ";
-var r4 = " It is not time to eat ";
-var message1 = getCurrentMeal1();
-var message2 = getCurrentMeal2();
-var message3 = getCurrentMeal3();
-var message4 = getCurrentMeal4();
-var message5 = getCurrentMeal5();
+
 
 //A
 function getCurrentMeal1() {
@@ -67,8 +55,21 @@ function getCurrentMeal5() {
 
 }
 
+var dt= new Date();
+var hr = dt.getHours();
+var min = dt.getMinutes();
+var tm = hr.toString()+':'+min.toString();
+var r1 = " BreakFast is served  in the morning ";
+var r2 = " Midday is time for lunch ";
+var r3 = " Supper is now served ";
+var r4 = " It is not time to eat ";
+var message1 = getCurrentMeal1();
+var message2 = getCurrentMeal2();
+var message3 = getCurrentMeal3();
+var message4 = getCurrentMeal4();
+var message5 = getCurrentMeal5();
 // console.log(message1)
 // console.log(message2)
 console.log(message3)
-console.log(message4)
-console.log(message5)
+// console.log(message4)
+// console.log(message5)
