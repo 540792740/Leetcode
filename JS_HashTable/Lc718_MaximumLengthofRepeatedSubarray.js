@@ -19,9 +19,8 @@ var findLength = function(A, B) {
             }
         }
     }
-    console.log(matrix)
     return res
 };
 
 console.log("result: " , 3, findLength([1,2,3,2,1], [3,2,1,4,7]))
-console.log("result: ", 9, findLength(    [0,0,0,0,0,0,1,0,0,0],        [0,0,0,0,0,0,0,1,0,0]))
+// console.log("result: ", 9, findLength(    [0,0,0,0,0,0,1,0,0,0],        [0,0,0,0,0,0,0,1,0,0]))
