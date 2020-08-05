@@ -19,8 +19,8 @@ TimeMap.prototype.get = function(key, timestamp1) {
             if(arr[mid].timestamp < targetTimestamp)left = mid + 1;
             else right = mid;
         }
-        if(arr[left] && arr[left].timestamp <= targetTimestamp) return arr[left].value;
-        if(arr[left - 1] && arr[left - 1].timestamp <= targetTimestamp) return arr[left - 1].value
+        if(arr[right] && arr[right].timestamp <= targetTimestamp) return arr[right].value;
+        if(arr[right - 1] && arr[right - 1].timestamp <= targetTimestamp) return arr[right - 1].value
         return ''
     }
 
