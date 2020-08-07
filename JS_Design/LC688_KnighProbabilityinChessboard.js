@@ -25,7 +25,7 @@ var knightProbability = function(N, K, r, c) {
                 }
             }
         }
-
+        console.log(newMatrix)
         matrix = newMatrix;
     }
     let res = 0;
@@ -38,5 +38,5 @@ var knightProbability = function(N, K, r, c) {
     return res / (8**K)
 };
 
-knightProbability(3,2,0,0)
+knightProbability(8,2,0,0)
 console.log(8**2)
