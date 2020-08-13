@@ -39,6 +39,7 @@ var NestedIterator = function(nestedList) {
 NestedIterator.prototype.hasNext = function() {
     let s = this.stack;
     while(s.length > 0){
+        console.log(s)
         let i;
         let nestedList;
         [nestedList, i] = this.stack[this.stack.length - 1];
