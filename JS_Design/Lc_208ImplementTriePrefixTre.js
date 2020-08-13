@@ -2,7 +2,7 @@
  * Initialize your data structure here.
  */
 var Trie = function() {
-
+    this.dic = {};
 };
 
 /**
@@ -11,7 +11,15 @@ var Trie = function() {
  * @return {void}
  */
 Trie.prototype.insert = function(word) {
-
+    let tempDic = this.dic;
+    for(let char of word){
+        if(tempDic[char]) tempDic = tempDic[char]
+        else{
+            tempDic[char] = {}
+            tempDic = tempDic[char];
+        }
+    }
+    tempDic['#']  = '#'
 };
 
 /**
@@ -20,7 +28,13 @@ Trie.prototype.insert = function(word) {
  * @return {boolean}
  */
 Trie.prototype.search = function(word) {
-
+    let tempDic = this.dic;
+    for(let char of word){
+        if(tempDic[char]) tempDic = tempDic[char]
+        else{return false}
+    }
+    if (tempDic['#']) return true;
+    return false
 };
 
 /**
@@ -29,13 +43,22 @@ Trie.prototype.search = function(word) {
  * @return {boolean}
  */
 Trie.prototype.startsWith = function(prefix) {
-
+    let tempDic = this.dic;
+    for(let char of prefix){
+        if(tempDic[char]) tempDic = tempDic[char]
+        else{return false}
+    }
+    for(let i in tempDic) {
+        return true;
+    }
+    return false
 };
 
-/**
- * Your Trie object will be instantiated and called as such:
- * var obj = new Trie()
- * obj.insert(word)
- * var param_2 = obj.search(word)
- * var param_3 = obj.startsWith(prefix)
- */
+var obj = new Trie()
+obj.insert("apple")
+obj.search("apple")
+obj.search("app")
+obj.startsWith("app")
+obj.insert("app")
+obj.search("app")
+
