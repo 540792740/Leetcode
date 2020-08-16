@@ -12,10 +12,16 @@ function TreeNode(val, left, right) {
 
 
 var rightSideView = function(root) {
+    function helper(node, h) {
+        if(!node) return;
+        res[h] = node.val;
+        helper(node.left, h + 1)
+        helper(node.right, h + 1)
+    }
+
+    //if(!root) return [];
     if(root == null) return [];
-
+    let res = [];
+    helper(root,0);
+    return res;
 };
-
-
-a = [[1,2] + [2]]
-console.log(a)
