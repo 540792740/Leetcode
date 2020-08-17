@@ -62,7 +62,7 @@ Nan + else = NaN
     var num = [1,2,3,43,4]
     var c = (total, num)=>{
         return total + num
-    }
+    }21112222222    
     var b = num.reduce(c)
 ```
 
