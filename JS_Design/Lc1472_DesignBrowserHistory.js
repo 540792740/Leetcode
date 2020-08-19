@@ -3,7 +3,7 @@
  */
 var BrowserHistory = function(homepage) {
     this.list = [homepage];
-    this.index = 1;
+    this.index = 0;
 };
 
 /**
