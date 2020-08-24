@@ -438,12 +438,15 @@ var fib = function (n) { return n < 2 ? n : fib(n - 1) + fib(n - 2); }
 //
 // )
 
-var assert = require('assert');
-function test(val){
-    if (!val) {
-        assert.notEqual(val, 1, 'This should not have passed.');
-    }
-    assert.equal(val, 1, 'This should have passed.');
-}
-test(1);
-test(0);
+// var assert = require('assert');
+// function test(val){
+//     if (!val) {
+//         assert.notEqual(val, 1, 'This should not have passed.');
+//     }
+//     assert.equal(val, 1, 'This should have passed.');
+// }
+// test(1);
+// test(0);
+
+a = parseInt('6', 16)
+console.log(a)
