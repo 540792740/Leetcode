@@ -81,3 +81,6 @@ Nan + else = NaN
     * Object.values(map) => [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
 
 #### 'a'.charCodeAt() => 97
+
+#### Full Element Array
+* Array.from(new Array(nums.length + 1).keys()).
