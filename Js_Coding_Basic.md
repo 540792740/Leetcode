@@ -75,7 +75,7 @@ Nan + else = NaN
     * s.size
     * let union = new Set([...a, ...b]);  => 并集
     * let intersect = new Set([...a].filter(x => b.has(x)))    交集
-    * let intersect = new Set([...a].filter(x => b.has(x)))    差集
+    * let intersect = new Set([...a].filter(x => !b.has(x)))    差集
     
 #### Map:
     * Object.values(map) => [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
