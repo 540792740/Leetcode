@@ -15,5 +15,4 @@ var rob = function(nums) {
         cur = Math.max(i + temp, cur)
     }
     return cur
-
 };
