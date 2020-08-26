@@ -45,12 +45,14 @@ var minimumMoves = function(arr) {
     // Fill size >= 3;
     for(let size = 3; size <= ls; size++){
         for(let l = 0, r = l + size - 1; r < ls; l++, r++){
-
+            if(arr[l] === arr[r]) dp[l][r] = dp[l + 1][r - 1];
+            for(let mid = l; mid < r; mid++){
+                dp[l][r] = Math.min(dp[l][r], dp[l][mid] + dp[mid + 1][r])
+            }
         }
     }
-
+    return dp[0][ls - 1]
 };
 
 // console.log(minimumMoves([1,2]), 'Result: 2')
 console.log(minimumMoves([1,3,4,1,5]), 'Result: 3')
-//
