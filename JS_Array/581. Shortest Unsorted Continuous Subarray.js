@@ -20,7 +20,6 @@ var findUnsortedSubarray = function(nums) {
             break;
         }
     }
-    console.log(r, l)
     if(l === r) return 0
     return r - l + 1
 
