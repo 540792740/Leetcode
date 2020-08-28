@@ -8,10 +8,15 @@ var maxLength = function(arr) {
         if(new Set(a).size < a.length) continue;
         a = new Set(a)
         for(let c of dp){
-            // let intersect = new Set([...a].filter(x => c.has(x)))
-            let intersect = [...a].filter(x => c.has(x))
-            // console.log(intersect1)
-            if(intersect.length !== 0) continue;
+            let flag = true
+            // let intersect = [...a].filter(x => c.has(x))
+            for(let i of a) if(c.has(i)) {
+                flag = false;
+                break;
+            }
+            if(flag === false) continue
+            // let intersect = [...a].filter(x => c.has(x))
+            // if(intersect.length !== 0) continue;
             else{dp.push( new Set([...a, ...c]))}
         }
     }

@@ -84,3 +84,8 @@ Nan + else = NaN
 
 #### Full Element Array
 * Array.from(new Array(nums.length + 1).keys()).
+
+#### Regular Expression
+* 'A,b,c-b@Q'.replace(/[^\w]/g, '')  -> AbcbQ
+* 'A,b,c-b@Q'.replace(/[A-z]/g, '')  -> ,,-@
+
