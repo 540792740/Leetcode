@@ -10,11 +10,3 @@
 var flipAndInvertImage = function(A) {
     return A.map(a => {return a.reverse().map(b=>b^1)})
 };
-
-var flipAndInvertImage1 = function(A) {
-
-
-};
-
-console.log(1^1)
-console.log(0^1)
