@@ -10,9 +10,18 @@
  * @return {ListNode}
  */
 var reverseList = function(head) {
-    let node ;
-    let root = TreeNode(null);
+    if(head === null) return head
+
+    // Dummy Node
+    let root = new ListNode(0, head);
     while(head.next !== null){
         let node = head.next;
+        let node1 = head.next.next;
+        let root1 = root.next;
+
+        root.next = node;
+        node.next = root1;
+        head.next = node1;
     }
+    return root.next
 };
