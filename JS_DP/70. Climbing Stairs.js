@@ -15,7 +15,19 @@ var climbStairs = function(n) {
     return cur;
 };
 
-/*  function(n, arr, k)
+/*  function f1(n, arr, k){
+
+    return
+}
+
+
+f1(3, arr, 2)   => 2
+
+f1(3, arr, 1)   => 1
+
+f1(3, arr, 3)   => 3
+
+
 *  arr =   [[1,2,3],
 *           [2,3,4],
 *           [3,3,3]]
