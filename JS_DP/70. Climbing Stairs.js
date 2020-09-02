@@ -14,3 +14,16 @@ var climbStairs = function(n) {
     }
     return cur;
 };
+
+/*  function(n, arr, k)
+*  arr =   [[1,2,3],
+*           [2,3,4],
+*           [3,3,3]]
+*  n = 3;
+*   k = 3
+*   return 0
+*
+*   [10]
+*   [1] [4] [6] > 10 return
+*           [5]  res += 1
+* */
