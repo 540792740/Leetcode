@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <link href='./styles.css' rel='stylesheet' type='text/css'>
+<!--    <link href='./styles.css' rel='stylesheet' type='text/css'>-->
 </head>
 <body>
-<h1>Hash Nav</h1>
-<nav>
-    <a href='#1'>1</a>
-    <a href='#2'>2</a>
-    <a href='#3'>3</a>
-    <a href='#4'>4</a>
-    <a href='#5'>5</a>
-    <a href='#6'>6</a>
-</nav>
-<p class='pShow'>Select A Number</p>
-<aside>
-    <h2>Features:</h2>
-    <ol>
-        <li>
-            <p>Add a hover state as per mockup below, so that those that are not hover are highlighted</p>
-            <p>Use color: <span>#a2a3a5</span></p>
-            <a href='./feature-ui-hover.png' target='_blank'>
-<!--                <img src='./feature-ui-hover.png'/>-->
-            </a>
-        </li>
-        <li>
-            <p>Create a <span>span</span> and display the hash value inside, then append to the <span>body > p</span> tag when nav item click (hash change)</p>
-            <p>CSS already provided</p>
-            <a href='./feature-hash-display.png' target='_blank'>
-<!--                <img src='./feature-hash-display.png'/>-->
-            </a>
-        </li>
-    </ol>
-    <h2>Bug:</h2>
-    <ol>
-        <li>
-            <p>Find a way to prevent empty hash value append to history in-between tab changes (hash changes)</p>
-            <a href='./bug-browser-history-sanitise.png' target='_blank'>
-<!--                <img src='./bug-browser-history-sanitise.png'/>-->
-            </a>
-        </li>
-    </ol>
-</aside>
-<script src='./scripts.js' type='text/javascript'></script>
+<h3>Some test tables</h3>
+<div>
+    <p>First table</p>
+    <table>
+        <tr>
+            <td>First</td>
+            <td>row</td>
+        </tr>
+        <tr>
+            <td>and</td>
+            <td>second</td>
+            <td>row</td>
+        </tr>
+        <tr>
+            <td>and</td>
+            <td>the</td>
+            <td>third</td>
+            <td>one</td>
+        </tr>
+    </table>
+</div>
+<p>Second table</p>
+<table>
+    <tr>
+        <td>Not</td>
+        <td>so</td>
+    </tr>
+    <tr>
+        <td>many</td>
+        <td>cells</td>
+    </tr>
+</table>
+
+<p>Third table</p>
+
+<table>
+    <tr>
+        <td>so</td>
+    </tr>
+    <tr>
+        <td>Not</td>
+        <td>so</td>
+    </tr>
+    <tr>
+        <td>Not</td>
+        <td>so</td>
+    </tr>
+    <tr>
+        <td>Not</td>
+        <td>so</td>
+    </tr>
+    <tr>
+        <td>many</td>
+        <td>cells</td>
+    </tr>
+</table>
+<script>
+    function solution() {
+        // you can access DOM Tree by using DOM Object Model:
+        let table = document.getElementsByTagName("table")
+        // console.log(table.length)
+        let res = 0;
+        for(let i = 0; i < table.length; i++){
+            let temp = 0;
+            let tbody = table[i].childNodes[1]
+            // console.log(tbody.childNodes)
+            for(let i = 0; i < tbody.childNodes.length; i++) {
+                if(i % 2 === 0){
+                    let ls = (tbody.childNodes[i].childNodes.length - 1) / 2
+                    temp += ls
+                }
+            }
+            res = Math.max(temp, res)
+        }
+        return res
+    }
+
+    console.log(solution())
+</script>
+
 </body>
 </html>
