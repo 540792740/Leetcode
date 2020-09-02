@@ -19,11 +19,15 @@
     <h1>Q2</h1>
     <div>
         <h1>login</h1>
-        <input type="text" placeholder = "@gmail.com" patten="email"> <br>
-        <input type="text" placeholder = "password"><br>
-        <button id="reset">reset</button><br>
-        <button>login</button><br>
-    </div>
+        <form >
+            <input type="text"
+                   placeholder = "@gmail.com"
+                   pattern="[A-Z]{3}"> <br>
+            <input type="text" placeholder = "password"><br>
+<!--            <button id="reset">reset</button><br>-->
+            <button submit="submit">login</button><br>
+        </form>
+         </div>
 
     <script>
         document.getElementById('reset').addEventListener("click", form_handler);
