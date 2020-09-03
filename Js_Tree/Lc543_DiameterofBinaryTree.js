@@ -22,4 +22,4 @@ var diameterOfBinaryTree = function(root) {
     helper(root)
     return res
 };
-//s
+
