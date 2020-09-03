@@ -4,16 +4,14 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const map = {};
+    let dic = {};
     for(let i = 0; i < nums.length; i++){
-        const another = target - nums[i];
-
-        if(another in map){
-            return [map[another], i];
+        console.log(dic)
+        if(dic[nums[i]] !== undefined) return [dic[nums[i]], i];
+        else{
+            dic[target - nums[i]] = i;
         }
-
-        map[nums[i]] = i;
     }
 };
-
+console.log(twoSum([2,8,4,7], 9))
 
