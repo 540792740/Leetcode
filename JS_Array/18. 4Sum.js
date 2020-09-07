@@ -6,7 +6,7 @@
 var fourSum = function(nums, target) {
     const helper = (nums, target, path, N)=>{
         let ls = nums.length
-        if(ls < N || N < 2) return []
+        if(ls < N || N < 2 || nums[0] * N > target || nums[ls - 1] * N < target) return []
         if(N === 2){
             let l = 0;
             let r = ls - 1;
