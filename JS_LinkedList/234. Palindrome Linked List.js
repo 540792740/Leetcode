@@ -4,27 +4,16 @@
  *     this.val = (val===undefined ? 0 : val)
  *     this.next = (next===undefined ? null : next)
  * }
+ * Test case: [1,2], [1, 2, 2, 1], [1], [], [-129, -129]
  */
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
+
 
 function ListNode(val, next) {
   this.val = (val===undefined ? 0 : val)
       this.next = (next===undefined ? null : next)
 }
 
-var isPalindrome1 = function(head) {
-    let res = '';
-    let res_palindrome = ''
-    while(head){
-        res += head.val;
-        res_palindrome = head.val + res_palindrome
-        head = head.next
-    }
-    return res === res_palindrome;
-};
+
 var isPalindrome = function(head) {
     if(!head || !head.next) return true
     let fast = head;
@@ -54,3 +43,16 @@ var isPalindrome = function(head) {
     }
     return true;
 }
+
+
+var isPalindrome1 = function(head) {
+    let res = '';
+    let res_palindrome = ''
+    while(head){
+        res += head.val;
+        res_palindrome = head.val + res_palindrome
+        head = head.next
+    }
+    return res === res_palindrome;
+};
+
