@@ -39,6 +39,7 @@ MinStack.prototype.top = function() {
 
 /**
  * @return {number}
+ * s
  */
 MinStack.prototype.getMin = function() {
     let ls = this.stack.length;
