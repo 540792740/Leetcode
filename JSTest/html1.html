@@ -6,39 +6,17 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="element">
-        <li>beijing</li>
-        <li>b</li>
-        <li>c</li>
-        <li>d</li>
-        <li>d</li>
-        <li>d</li>
-        <li>d</li>
-    </div>
-
-    <h1>Q2</h1>
-    <div>
-        <h1>login</h1>
-        <form >
-            <input type="text"
-                   placeholder = "@gmail.com"
-                   pattern="[A-Z]{3}"> <br>
-            <input type="text" placeholder = "password"><br>
-<!--            <button id="reset">reset</button><br>-->
-            <button submit="submit">login</button><br>
-        </form>
-         </div>
-
+    <textarea name="textarea"
+              id="tx"
+              cols="30"
+              rows="10"></textarea>
+    <button onclick="doit()">click</button>
     <script>
-        document.getElementById('reset').addEventListener("click", form_handler);
-        const inputs = document.querySelectorAll("input");
-        function form_handler() {
-            console.log('ss')
-            inputs.forEach(input =>{
-                input.value = "";
-            })
+        const  doit = () =>{
+            let text = document.getElementById('tx').innerHTML
+            text = text[0].toUpperCase() + text.slice(1)
+            document.getElementById('tx').innerHTML = text
         }
-    </script>>
-
+    </script>
 </body>
 </html>
