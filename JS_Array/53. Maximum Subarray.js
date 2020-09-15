@@ -28,3 +28,24 @@ var maxSubArray = function(nums) {
     }
     return res;
 };
+
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray1 = function(nums) {
+    // res_sum = -Math.Max_Value;
+    // sum: sum < 0; update res_sum;
+    // sum < nums[i] update sum;
+    // sum > nums[i]
+
+    let prev = 0;
+    let res = -Number.MAX_VALUE;
+    for(let i = 0; i < nums.length; i++){
+        prev = Math.max(prev + nums[i], nums[i]);
+        res = Math.max(res, prev)
+    }
+    return res;
+};
