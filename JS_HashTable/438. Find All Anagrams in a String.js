@@ -8,14 +8,19 @@
  *
  */
 var findAnagrams = function(s, p) {
-    const findAnagrams = (str) => {
-        let set = new Set();
-        const helper = (p, str) => {
-            // for(let )
-        }
-        return
-    }
+    const findAnagrams = (p_rem, str) => {
+        if(p_rem.length === 0) set.add(str)
+        for(let i in p_rem){
+            str += p_rem[i];
+            p_rem = p_rem.slice(0, i) + p_rem.slice(i + 1)
+            findAnagrams(p_rem, str)
+            console.log(p_rem)
 
-    let p_anagrams = findAnagrams(p);
+        }
+    }
+    let set = new Set();
+    let p_anagrams = findAnagrams(p, '');
 
 };
+
+console.log(findAnagrams("cbaebabacd", "abc"))

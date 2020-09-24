@@ -18,7 +18,7 @@ var exist = function(board, word) {
                 if (board[dx][dy] === word[index]) {
                     board[dx][dy] = '';
                     index++;
-                    if (helper(dx, dy, index, board)) return true
+                    if (helper(dx, dy, index)) return true
                     index--;
                     board[dx][dy] = word[index];
                 }
