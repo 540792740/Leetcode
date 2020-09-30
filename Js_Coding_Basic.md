@@ -89,3 +89,6 @@ Nan + else = NaN
 * 'A,b,c-b@Q'.replace(/[^\w]/g, '')  -> AbcbQ
 * 'A,b,c-b@Q'.replace(/[A-z]/g, '')  -> ,,-@
 
+#### DFS
+* Hashtable LC-438.
+

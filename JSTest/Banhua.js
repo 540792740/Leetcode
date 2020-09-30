@@ -7,6 +7,13 @@ var file2 = "./old.json";
 var mockData = JSON.parse(fs.readFileSync( file1));
 var prodData = JSON.parse(fs.readFileSync( file2));
 
+fs.writeFile('./mock_copy.json',mockData,'utf8',function(err){
+    if(err)
+        console.log('写文件出错了，错误是：'+err);
+    else
+        console.log('ok');
+})
+
 // initial function to compare two json data
 function JsonCompare(data1, data2) {
     // Initial Res as a map;
@@ -19,11 +26,10 @@ function JsonCompare(data1, data2) {
     }
     const data1_key1 = Object.keys(data2["data"])
     const data1_key2 = Object.keys(data1["data"][0])
-    // console.log(data1_key1)
-    // console.log(data1_key2)
 
     return res
+
 }
 
 
-console.log(JsonCompare(mockData, prodData))
+// console.log(JsonCompare(mockData, prodData))
