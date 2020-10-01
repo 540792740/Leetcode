@@ -10,7 +10,7 @@ var findDuplicate = function(nums) {
     }
 };
 
-var findDuplicate = function(nums) {
+var findDuplicate1 = function(nums) {
     for(let n of nums){
         if(nums[Math.abs(n)] < 0) return Math.abs(n);
         nums[Math.abs(n)]*=-1;
