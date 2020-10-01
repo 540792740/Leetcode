@@ -10,6 +10,8 @@ var coinChange = function(coins, amount) {
         for(let c of coins){
             if(i >= c) res[i] = Math.min(res[i], res[i - c] + 1);
         }
+        console.log(res)
+
     }
     return res[amount] === amount + 1 ? -1 : res[amount];
 }
