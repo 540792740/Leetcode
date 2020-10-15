@@ -16,20 +16,8 @@ var hasPath = function(maze, start, destination) {
     // init directions
     let directions = [[0, 1], [0, -1], [1, 0], [-1, 0]];
 
-    // init visited node
-    let visited = new Set();
-
     // BFS find all possible solutions
-    const BFS = (position) =>{
-
-        // position means current position;
-        if(position[0] === destination[0] && position[1] === destination[1]) return true;
-
-        // return false once visited
-        if(visited.has(position[0] + '' + position[1]) === true) return false;
-
-        // save visited node into set
-        visited.add(position[0] + '' + position[1]);
+    const DFS = (matrix, position) =>{
 
         for(let direction of directions){
             let dx = position[0];
@@ -38,21 +26,31 @@ var hasPath = function(maze, start, destination) {
             // new position should be not visited and in the maze
             while(dx + direction[0] > -1 && dx + direction[0]< m &&
             dy + direction[1] > -1 && dy + direction[1] < n &&
-            maze[dx + direction[0]][dy + direction[1]] === 0){
+            matrix[dx + direction[0]][dy + direction[1]] !== 1){
                 dx += direction[0];
                 dy += direction[1];
+
+                // visited node is 2
+                if(matrix[dx][dy] === 2) break;
             }
-            if(BFS([dx, dy]) === true) return true;
+
+            if(dx === position[0] && dy === position[1] || matrix[dx][dy] === 2) continue
+
+            // mark as visited
+            matrix[dx][dy] = 2;
+            if(dx === destination[0] && dy === destination[1]) return true
+
+            if(DFS(matrix, [dx, dy]) === true) return true;
 
         }
         return false;
     }
 
-    return BFS(start)
+    return DFS(maze,start)
 
 };
 
-console.log(hasPath([[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]], [0,4],[4,4]))
-// console.log(hasPath([[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]]
-//     ,[0,4]
-//     ,[3,2]))
+// console.log(hasPath([[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]], [0,4],[4,4]))
+console.log(hasPath([[0,0,1,0,0],[0,0,0,0,0],[0,0,0,1,0],[1,1,0,1,1],[0,0,0,0,0]]
+    ,[0,4]
+    ,[3,2]))
