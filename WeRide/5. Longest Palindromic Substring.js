@@ -32,6 +32,7 @@ var longestPalindrome = function(s) {
         // even
         let evenLength = check(i, i + 1)
         if(evenLength.length > res.length) res = evenLength;
+
         //odd
         let oddLength = check(i, i)
         if(oddLength.length > res.length) res = oddLength;
