@@ -92,3 +92,5 @@ Nan + else = NaN
 #### DFS
 * Hashtable LC-438.
 
+#### Deep Copy
+* var ary2 = JSON.parse(JSON.stringify(matrix));
