@@ -96,4 +96,4 @@ Nan + else = NaN
 * var ary2 = JSON.parse(JSON.stringify(matrix));
 
 #### array
-全是None的数组: `[None] * array.length`
+长度为10数组: `let arr = Array(10)`
