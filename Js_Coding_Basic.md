@@ -94,3 +94,6 @@ Nan + else = NaN
 
 #### Deep Copy
 * var ary2 = JSON.parse(JSON.stringify(matrix));
+
+#### array
+全是None的数组: `[None] * array.length`
