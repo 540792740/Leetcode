@@ -22,11 +22,7 @@
 10
 */
 
-
-
-
 let dic = { 0: '零', 1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七', 8: '八', 9: '九' };
-
 
 function translate(num) {
 
@@ -45,15 +41,13 @@ function translate(num) {
 
 	// read after '.' 
 	if (arr.length === 2) {
-		for (let i of arr[1]) { res = res + dic[i] }
-		res = '点' + res
+		for (let i of arr[1]) res = res + dic[i];
+		res = '点' + res;
 	}
 	// read before '.' 
 	while (arr[0] > 0) {
 		var tempNum = arr[0] % 10000;
-		if (flagCount0) {
-			res = dic[0] + res;
-		}
+		if (flagCount0) res = dic[0] + res;
 
 		// get 4 digit with unit
 		strIns = toCharater(tempNum);
@@ -96,7 +90,7 @@ function toCharater(num) {
 
 	// deal with unexpected value
 	if (res[res.length - 1] === '零') res = res.substring(0, res.length - 1);
-	if (res === '一十') res = '十'
+	if (res === '一十') res = '十';
 	return res;
 }
 
@@ -109,6 +103,5 @@ translate(10)
 translate(100)
 translate(1009)
 translate(10009)
-translate(100009)
 translate(1010009)
 translate(101000109)
