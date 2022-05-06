@@ -39,9 +39,9 @@ nums.splice(2, 3)  -> [1,2,6]
 * array.map(a=>{return a.reverse()})
 
 ####11. Bit Manipulation
-# or gate a^1  -> [0,1,1,]  -> [1,0,0]
+* or gate a^1  -> [0,1,1,]  -> [1,0,0]
 
-#### undefine:
+#### undefined:
 undefine + ''    =  undefine
 undefine + 'abc' = 'undefineabc'
 undefine + else  =  NaN
