@@ -1,3 +1,7 @@
-# LeetCode
+## Data Structure & Basic JS
 
-This project used for improving coding ability
+### Basic JS: /js-method
+* Promise.all()
+* Promise.race()
+
+

@@ -14,20 +14,16 @@ const p5 = new Promise((resolve, reject) => {
   setTimeout(() => reject('p5 rejected 延时1.5秒'), 1500)
 })
 
-Promise.all([p1, p2, p3 ]).then(res=> console.log(res))  => ['p1', 'p2 延时5秒', 'p3 延时两秒' ]
-Promise.all([p1, p4, p5 ]).then(res=> console.log(res))  => p4 rejected
+永远返回最快的，不管是resolve还是reject
+Promise.race([p1, p2, p3 ]).then(res=> console.log(res))  => p1
+Promise.race([p1, p4, p5 ]).then(res=> console.log(res))  => p1
+Promise.race([p2, p4, p5 ]).then(res=> console.log(res))  => p4 rejected
 */
-
-Promise.MyAll = function (promises) {
-  let arr = [];
-  let count = 0; // 计数器统计是否所有都执行
+Promise.MyRace = function (promises) {
   return new Promise((resolve, reject) => {
-    promises.forEach((item, i) => {
-      Promise.resolve(item).then(res => {
-        arr[i] = res;
-        count += 1;
-        if (count === promises.length) resolve(arr)
-      }, reject) //.then()第二个参数，是处理错误的回调函数：
-    })
+    // 这里不需要使用索引，只要能循环出每一项就行
+    for (const item of promises) {
+      Promise.resolve(item).then(resolve, reject) //.then()第二个参数，是处理错误的回调函数：
+    }
   })
 }
