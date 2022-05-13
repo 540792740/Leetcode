@@ -2,11 +2,11 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    let dic = {};
-    for(let i = 0; i < nums.length; i++){
-        dic[nums[i]] = dic[nums[i]] + 1 || 1;
-        if(dic[nums[i]] !== 1){return true}
+var containsDuplicate = function (nums) {
+    let newSet = new Set();
+    for (let ele of nums) {
+        if (newSet.has(ele)) return true;
+        else { newSet.add(ele) }
     }
-    return false;
+    return false
 };
