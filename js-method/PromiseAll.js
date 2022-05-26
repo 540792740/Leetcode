@@ -27,7 +27,7 @@ Promise.MyAll = function (promises) {
         arr[i] = res;
         count += 1;
         if (count === promises.length) resolve(arr)
-      }, reject) //.then()第二个参数，是处理错误的回调函数：
+      }, reject("Error")) //.then()第二个参数，是处理错误的回调函数：
     })
   })
 }
