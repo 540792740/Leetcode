@@ -14,7 +14,7 @@ var isValidSudoku = function (board) {
   let k // 记录当前9宫格位置
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      if (board[i][j] !== ".") {
+      if (board[i][j] !== '.') {
         num = board[i][j] - 1;
         k = Math.floor(i / 3) + Math.floor(j / 3) * 3
         if (row[num][j] || column[i][num] || square[k][num]) return false
