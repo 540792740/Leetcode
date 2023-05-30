@@ -97,3 +97,7 @@ Nan + else = NaN
 
 #### array
 长度为10数组: `let arr = Array(10)`
+
+#### 数学
+* 辗转相除法求最大公约数
+`const gcd = (a, b) => (0 === b ? a : gcd(b, a % b))`
