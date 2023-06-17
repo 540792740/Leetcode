@@ -45,19 +45,21 @@ console.log(func1(4));
 console.log(func2(4));
 
 function cloneOtherType(targe, type) {
-  const Ctor = targe.constructor;
   switch (type) {
     case boolTag:
     case numberTag:
     case stringTag:
     case errorTag:
     case dateTag:
-      return new Ctor(targe);
-    case regexpTag:
-      return cloneReg(targe);
-    case symbolTag:
-      return cloneSymbol(targe);
+      return new targe.constructor;
+    case regexpTag: // 正则
+      const reFlags = /\w*$/;
+      const result = new targe.constructor(targe.source, reFlags.exec(targe));
+      result.lastIndex = targe.lastIndex;
+      return result;
+    case symbolTag: // symbol
+      return Object(Symbol.prototype.valueOf.call(targe));
     default:
       return null;
   }
-}
+} 
